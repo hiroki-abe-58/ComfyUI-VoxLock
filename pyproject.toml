@@ -1,0 +1,25 @@
+[project]
+name = "voxlock-voice-isolation"
+description = "VoxLock voice isolation for ComfyUI: keep one voice and remove the other voices in a recording, with the official VoxLock models (ONNX, CPU, about 12 times real time). Same output as the official voxlock package, bit for bit."
+version = "0.1.0"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = ["voxlock==1.1.1"]
+
+[project.urls]
+Repository = "https://github.com/hiroki-abe-58/ComfyUI-VoxLock"
+
+[tool.comfy]
+PublisherId = "hiroki-abe-58"
+DisplayName = "VoxLock Voice Isolation for ComfyUI"
+Icon = ""
+
+[tool.ruff]
+line-length = 180
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,8 @@
+{
+  "1": {"class_type": "LoadAudio", "inputs": {"audio": "voice_mix.wav"}},
+  "2": {"class_type": "VoxLockLoader", "inputs": {"precision": "int8", "threads": 0}},
+  "6": {"class_type": "LoadAudio", "inputs": {"audio": "voice_sample.wav"}},
+  "3": {"class_type": "VoxLockIsolateVoice", "inputs": {"model": ["2", 0], "audio": ["1", 0], "output_sample_rate": "input", "voice_sample": ["6", 0]}},
+  "4": {"class_type": "SaveAudioAdvanced", "inputs": {"audio": ["3", 0], "filename_prefix": "voxlock/isolated_with_sample", "format": "flac"}},
+  "5": {"class_type": "PreviewAny", "inputs": {"source": ["3", 1]}}
+}

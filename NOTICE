@@ -1,0 +1,16 @@
+VoxLock Voice Isolation for ComfyUI
+Copyright (c) 2026 hiroki-abe-58. The code of this node pack is licensed under the MIT License (LICENSE).
+
+This node pack is an unofficial integration. It is not affiliated with or endorsed by the VoxLock author or by Comfy Org.
+
+Third-party software and models (not included in this repository)
+-----------------------------------------------------------------
+- The `voxlock` Python package (https://github.com/arbazsiddiqui/voxlock, Apache License 2.0) is installed from PyPI as a
+  requirement; the nodes call its public API.
+- Model files (arbazsiddiqui/voxlock on Hugging Face, Apache License 2.0) are not included and are never downloaded by the
+  nodes; tools/download_model.py fetches them at the revision the voxlock 1.1.1 package uses, when you run it.
+
+Figure
+------
+docs/images/spectrogram.png shows a demo mixture from the VoxLock repository (two LibriSpeech test-clean speakers, CC BY 4.0,
+in a simulated room) and this pack's output for it.
