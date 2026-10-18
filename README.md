@@ -51,7 +51,7 @@ Windows 11, ComfyUI v0.38.0, CPU (Intel Core Ultra 9 285K); details and raw numb
   synthetic two-voice audio, the pack compared with the official steps for every precision, ComfyUI's own validation of the
   workflows, and a real ComfyUI queue.
 
-**Not checked:** Linux and macOS outside CI, other ComfyUI versions, music or singing (VoxLock is trained for speech), and the
+**Not checked:** Linux and macOS outside CI, other ComfyUI versions with the real model (the CPU tests and the real-queue check also run against ComfyUI v0.41.0 in CI), music or singing (VoxLock is trained for speech), and the
 isolation quality itself (the pack reproduces the official outputs; it does not re-evaluate the model).
 
 ## Install

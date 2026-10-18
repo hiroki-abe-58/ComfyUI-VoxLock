@@ -39,7 +39,7 @@ Windows 11、ComfyUI v0.38.0、CPU（Intel Core Ultra 9 285K）：
 - **CI**（GitHub Actions、Ubuntu と Windows、Python 3.12 / torch 2.14.1 と Python 3.10 / torch 2.8.0）：合成した 2 人の声で実モデルを
   動かし、全精度で公式手順と比較、ComfyUI 自身のワークフロー検証、実際の ComfyUI キュー。
 
-**未確認**：CI 以外の Linux / macOS、他の ComfyUI バージョン、音楽や歌声（VoxLock は会話音声向け）、分離品質そのものの評価
+**未確認**：CI 以外の Linux / macOS、他の ComfyUI バージョンでの実モデル実行（v0.41.0 でも CI で CPU テストと実キュー確認を実行）、音楽や歌声（VoxLock は会話音声向け）、分離品質そのものの評価
 （公式出力の再現までを確認しています）。
 
 ## インストール
