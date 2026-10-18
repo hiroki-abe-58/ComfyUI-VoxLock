@@ -44,6 +44,9 @@ Windows 11, ComfyUI v0.38.0, CPU (Intel Core Ultra 9 285K); details and raw numb
   `pip install voxlock==1.1.1`.
 - **Real ComfyUI queue:** Load Audio → VoxLock → Save Audio (FLAC) gives the official output to within half a 16-bit step (the
   rounding of the 16-bit FLAC) in 5 of 5 jobs, including the voice-sample workflow and output at 48 kHz.
+- **Clean install:** fresh ComfyUI v0.38.0, fresh Python 3.12 environment, `git clone` of this repository, `pip install -r
+  requirements.txt` (adds only new packages), the models downloaded with `tools/download_model.py` (SHA-256 verified), and the
+  real-queue check against the installed pack.
 - **CI** (GitHub Actions; Ubuntu and Windows, Python 3.12 / torch 2.14.1 and Python 3.10 / torch 2.8.0): the real models on
   synthetic two-voice audio, the pack compared with the official steps for every precision, ComfyUI's own validation of the
   workflows, and a real ComfyUI queue.

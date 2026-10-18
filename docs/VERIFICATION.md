@@ -109,4 +109,15 @@ Repeated runs with the same settings are identical (tests and queue).
 - GitHub Actions (`.github/workflows/ci.yml`), CPU, ComfyUI v0.38.0 at its pinned commit, the models downloaded with
   `tools/download_model.py` (SHA-256 checked): Ubuntu 24.04 and Windows with Python 3.12 / torch 2.14.1, Ubuntu 24.04 with
   Python 3.10 / torch 2.8.0. Each job runs ruff, a scan for absolute local paths, the tests with the references required (nothing
-  may be skipped) and the real-queue check.
+  may be skipped) and the real-queue check. All three jobs passed on the first run (`352e50f`); on Linux, too, the queue's FLAC
+  equals the official output within half a 16-bit step.
+
+## 6. Clean install
+
+Fresh ComfyUI v0.38.0 clone, fresh Python 3.12 virtual environment (torch 2.14.1+cu130, then ComfyUI's `requirements.txt`, then
+this pack's `requirements.txt`), `git clone` of this repository into `custom_nodes`:
+
+- Installing the pack's requirements added `voxlock` 1.1.1, `onnxruntime` 1.31.0, `soundfile`, `soxr` and their dependencies
+  (`cffi`, `flatbuffers`, `protobuf`, `pycparser`); nothing that ComfyUI had installed was changed.
+- `tools/download_model.py --models-dir ComfyUI/models/voxlock` downloaded all 8 files from Hugging Face (19 s) and verified them.
+- `scripts/ci_queue_check.py --keep-pack` against the installed pack and the downloaded models: passed (section 5).

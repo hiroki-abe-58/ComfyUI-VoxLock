@@ -33,6 +33,9 @@ Windows 11、ComfyUI v0.38.0、CPU（Intel Core Ultra 9 285K）：
   公式側は `pip install voxlock==1.1.1` だけの別環境で実行しています。
 - **実際の ComfyUI キュー**：Load Audio → VoxLock → Save Audio（FLAC）の出力は、5 件すべてで公式出力と 16 ビットの半ステップ以内
   （16 ビット FLAC の丸め）で一致しました。
+- **クリーンインストール**：新しい ComfyUI v0.38.0、新しい Python 3.12 環境、このリポジトリの `git clone`、`pip install -r
+  requirements.txt`（新しいパッケージが追加されるだけ）、`tools/download_model.py` でのモデル取得（SHA-256 検証）、インストールした
+  パックでの実キュー確認。
 - **CI**（GitHub Actions、Ubuntu と Windows、Python 3.12 / torch 2.14.1 と Python 3.10 / torch 2.8.0）：合成した 2 人の声で実モデルを
   動かし、全精度で公式手順と比較、ComfyUI 自身のワークフロー検証、実際の ComfyUI キュー。
 
